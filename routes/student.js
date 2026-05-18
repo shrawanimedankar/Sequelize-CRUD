@@ -9,14 +9,14 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/student');
 
-router.get('/', controller.getAllStudents); //READ/GET ALL students
+router.post('/', controller.getAllStudents); //READ/GET ALL students
 
-router.get('/:id', controller.getStudentById); // READ/GET ONE student by id
+router.post('/getById', controller.getStudentById); // READ/GET ONE student by id
 
-router.post('/', controller.createStudent); // CREATE a new student
+router.post('/create', controller.createStudent); // CREATE a new student
 
-router.put('/:id', controller.updateStudent); //UPDATE an existing student
+router.post('/update', controller.updateStudent); //UPDATE an existing student
 
-router.delete('/:id', controller.deleteStudent); // DELETE a student
+router.post('/delete', controller.deleteStudent); // DELETE a student
 
 module.exports = router;

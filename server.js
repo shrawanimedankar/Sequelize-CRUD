@@ -19,6 +19,7 @@ sequelize.sync()
   console.log("Tables created");
 });
 
+//Server Started
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
