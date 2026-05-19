@@ -16,8 +16,8 @@ const getStudentById = async (req, res) => {
   try {
     const { id } = req.body;
     const student = await Student.findByPk(id);
-
     // const student = await Student.findByPk(req.params.id);
+    
     if (!student) {
       return res.status(404).json({ success: false, message: "Student not found", });
     }

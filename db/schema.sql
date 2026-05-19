@@ -26,7 +26,7 @@ VALUES
 
 INSERT INTO teacher(name, email, subject)
 VALUES
-("Rose", "rose@gmail.com", "Mathematics"),
-("Jiwoo", "jiwoo@gmail.com", "Physics"),
-("Bora", "bora@gmail.com", "Chemistry"),
-("Yuri", "yuri@gmail.com", "Computer Science");
+("Rose", "rose@gmail.com", "Java"),
+("Jiwoo", "jiwoo@gmail.com", "C++"),
+("Bora", "bora@gmail.com", "React"),
+("Yuri", "yuri@gmail.com", "Python");
