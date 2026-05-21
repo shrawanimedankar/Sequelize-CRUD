@@ -17,13 +17,16 @@ const Student = sequelize.define("Student",
             allowNull: false,
             unique: true,
         },
-    },
-    {
-        tableName: "student",
-        timestamps: true,
-        createdAt: "created_at",
-        updatedAt: false,
-    }
+        password: {
+            type: DataTypes.STRING,
+            alllowNull: false,
+        },
+    }, {
+    tableName: "student",
+    timestamps: true,
+    createdAt: "created_at",
+    updatedAt: false,
+}
 );
 
 module.exports = Student;
