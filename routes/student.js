@@ -21,5 +21,3 @@ router.post('/update', authenticateJWT, controller.updateStudent); //UPDATE an e
 router.post('/delete', authenticateJWT, controller.deleteStudent); // DELETE a student
 
 module.exports = router;
-
-

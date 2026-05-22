@@ -67,7 +67,7 @@ const createStudent = async (req, res) => {
     const hashedPassword =
       await bcrypt.hash(password, 10);
 
-    const student = await Student.create({ name, email, password});
+    const student = await Student.create({ name, email, password: hashedPassword, });
     // res.status(201).json({ success: true, data: student, });
     return sendResponse(res, {
       success: true,
@@ -173,4 +173,34 @@ const deleteStudent = async (req, res) => {
   }
 };
 
-module.exports = { getAllStudents, getStudentById, createStudent, updateStudent, deleteStudent };
+// module.exports = { getAllStudents, getStudentById, createStudent, updateStudent, deleteStudent };
+
+module.exports = {
+  routes: [
+    {
+      method: "post",
+      path: "/",
+      handler: getAllStudents,
+    },
+    {
+      method: "post",
+      path: "/getById",
+      handler: getStudentById,
+    },
+    {
+      method: "post",
+      path: "/create",
+      handler: createStudent,
+    },
+    {
+      method: "post",
+      path: "/update",
+      handler: updateStudent,
+    },
+    {
+      method: "post",
+      path: "/delete",
+      handler: deleteStudent,
+    },
+  ],
+};

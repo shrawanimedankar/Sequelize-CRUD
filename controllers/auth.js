@@ -61,6 +61,8 @@ const login = async (req, res) => {
             { expiresIn: "1d" }
         );
         console.log(process.env.JWT_SECRET);
+        res.setHeader("Authorization", `${token}`);
+        res.setHeader("Login", "api/students");
         return sendResponse(res, {
             success: true,
             status_code: 200,
@@ -81,3 +83,4 @@ const login = async (req, res) => {
 };
 
 module.exports = { signup, login };
+
