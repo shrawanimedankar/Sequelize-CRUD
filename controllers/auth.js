@@ -62,7 +62,7 @@ const login = async (req, res) => {
         );
         console.log(process.env.JWT_SECRET);
         res.setHeader("Authorization", `${token}`);
-        res.setHeader("Login", "api/students");
+        // res.setHeader("Login", "api/students");
         return sendResponse(res, {
             success: true,
             status_code: 200,

@@ -19,7 +19,7 @@ const Student = sequelize.define("Student",
         },
         password: {
             type: DataTypes.STRING,
-            alllowNull: false,
+            allowNull: false,
         },
     }, {
     tableName: "student",
