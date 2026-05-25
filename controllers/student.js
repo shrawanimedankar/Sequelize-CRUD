@@ -182,31 +182,26 @@ module.exports = {
       method: "post",
       path: "/",
       handler: getAllStudents,
-      middlewares: [authenticateJWT],
     },
     {
       method: "post",
       path: "/getById",
       handler: getStudentById,
-      middlewares: [authenticateJWT],
     },
     {
       method: "post",
       path: "/create",
       handler: createStudent,
-      middlewares: [authenticateJWT],
     },
     {
       method: "post",
       path: "/update",
       handler: updateStudent,
-      middlewares: [authenticateJWT],
     },
     {
       method: "post",
       path: "/delete",
       handler: deleteStudent,
-      middlewares: [authenticateJWT],
     },
   ],
 };

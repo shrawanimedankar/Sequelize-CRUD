@@ -1,12 +1,12 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Student = require("../models/student");
+const Teacher = require("../models/teacher");
 const { sendResponse } = require("../utils/common");
 
 const signup = async (req, res) => {
     try {
         const { name, email, password } = req.body;
-
         const existingStudent = await Student.findOne({ where: { email } });
         if (existingStudent) {
             return sendResponse(res, {
@@ -60,7 +60,6 @@ const login = async (req, res) => {
             process.env.JWT_SECRET,
             { expiresIn: "1d" }
         );
-        console.log(process.env.JWT_SECRET);
         res.setHeader("Authorization", `${token}`);
         // res.setHeader("Login", "api/students");
         return sendResponse(res, {

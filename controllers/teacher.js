@@ -1,5 +1,7 @@
 const Teacher = require("../models/teacher");
 const { sendResponse } = require("../utils/common");
+const bcrypt = require("bcrypt");
+const authenticateJWT = require("../middleware/jwtAuth");
 
 const getAllTeachers = async (req, res) => {
     try {
@@ -156,4 +158,33 @@ const deleteTeacher = async (req, res) => {
     }
 };
 
-module.exports = { getAllTeachers, getTeacherById, createTeacher, updateTeacher, deleteTeacher };
+// module.exports = { getAllTeachers, getTeacherById, createTeacher, updateTeacher, deleteTeacher };
+module.exports = {
+    routes: [
+        {
+            method: "post",
+            path: "/",
+            handler: getAllTeachers,
+        },
+        {
+            method: "post",
+            path: "/getById",
+            handler: getTeacherById,
+        },
+        {
+            method: "post",
+            path: "/create",
+            handler: createTeacher,
+        },
+        {
+            method: "post",
+            path: "/update",
+            handler: updateTeacher,
+        },
+        {
+            method: "post",
+            path: "/delete",
+            handler: deleteTeacher,
+        },
+    ]
+};

@@ -17,16 +17,16 @@ CREATE TABLE IF NOT EXISTS teacher (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO student(name, email)
-VALUES
-('Shrawi', 'shrawi@gmail.com'),
-('Vincenzo', "vincenzo@gmail.com"),
-('Minjoon', "minjoon@gmail.com"),
-('Henry', "henry@gmail.com");
+-- INSERT INTO student(name, email)
+-- VALUES
+-- ('Shrawi', 'shrawi@gmail.com'),
+-- ('Vincenzo', "vincenzo@gmail.com"),
+-- ('Minjoon', "minjoon@gmail.com"),
+-- ('Henry', "henry@gmail.com");
 
-INSERT INTO teacher(name, email, subject)
-VALUES
-("Rose", "rose@gmail.com", "Java"),
-("Jiwoo", "jiwoo@gmail.com", "C++"),
-("Bora", "bora@gmail.com", "React"),
-("Yuri", "yuri@gmail.com", "Python");
+-- INSERT INTO teacher(name, email, subject)
+-- VALUES
+-- ("Rose", "rose@gmail.com", "Java"),
+-- ("Jiwoo", "jiwoo@gmail.com", "C++"),
+-- ("Bora", "bora@gmail.com", "React"),
+-- ("Yuri", "yuri@gmail.com", "Python");

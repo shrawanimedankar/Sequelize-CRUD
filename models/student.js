@@ -21,12 +21,13 @@ const Student = sequelize.define("Student",
             type: DataTypes.STRING,
             allowNull: false,
         },
-    }, {
-    tableName: "student",
-    timestamps: true,
-    createdAt: "created_at",
-    updatedAt: false,
-}
+    },
+    {
+        tableName: "student",
+        timestamps: true,
+        createdAt: "created_at",
+        updatedAt: false,
+    }
 );
 
 module.exports = Student;
