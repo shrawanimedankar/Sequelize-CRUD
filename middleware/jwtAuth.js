@@ -24,4 +24,4 @@ const authenticateJWT = (excludedRoutes = []) => {
         }
     };
 };
-module.exports = authenticateJWT;
+module.exports = authenticateJWT;  

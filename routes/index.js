@@ -15,10 +15,7 @@ router.use("/auth", require("./auth"));
 
 Object.keys(routes).forEach((moduleName) => {
   routes[moduleName].forEach((route) => {
-    router[route.method](`/${moduleName}${route.path}`,
-      authenticateJWT(excludedRoutes),
-      route.handler,
-    );
+    router[route.method](`/${moduleName} ${route.path}`, authenticateJWT(excludedRoutes), route.handler,);
   });
 });
 
